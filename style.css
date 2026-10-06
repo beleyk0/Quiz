@@ -1,0 +1,131 @@
+@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600;700&family=Inter:wght@300;400;500;600;700&display=swap');
+
+:root {
+    --cor-fundo: #0b070a;
+    --cor-principal: #171016;
+    --cor-secundaria: #2b1b28;
+    --cor-destaque: #c86b98;
+    --cor-destaque-2: #8e4168;
+    --cor-texto: #f4e8ee;
+    --cor-texto-secundario: #bdaab4;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    background:
+        radial-gradient(circle at top, #24121f 0%, #0b070a 55%);
+    color: var(--cor-texto);
+    font-family: 'Inter', sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    padding: 20px;
+}
+
+.caixa-principal {
+    background-color: rgba(23, 16, 22, 0.95);
+    width: 90%;
+    max-width: 700px;
+    text-align: center;
+    padding: 40px;
+    border: 1px solid #3a2633;
+    border-radius: 20px;
+    box-shadow: 0 15px 50px rgba(0, 0, 0, 0.6);
+}
+
+h1,
+.caixa-perguntas,
+.caixa-resultado {
+    font-family: 'Cinzel', serif;
+}
+
+h1 {
+    color: var(--cor-destaque);
+    font-size: 32px;
+    margin-bottom: 25px;
+    letter-spacing: 1px;
+}
+
+.tela-inicial p {
+    color: var(--cor-texto-secundario);
+    line-height: 1.8;
+    font-size: 15px;
+}
+
+.caixa-perguntas {
+    font-size: 20px;
+    line-height: 1.6;
+    color: var(--cor-texto);
+    margin-bottom: 25px;
+}
+
+.caixa-alternativas {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+button {
+    background-color: var(--cor-secundaria);
+    color: var(--cor-texto);
+    border: 1px solid #493142;
+    border-radius: 12px;
+    padding: 16px;
+    font-family: 'Inter', sans-serif;
+    font-size: 14px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+button:hover {
+    background-color: var(--cor-destaque);
+    color: #160b11;
+    border-color: var(--cor-destaque);
+    transform: translateY(-2px);
+}
+
+.iniciar-btn,
+.novamente-btn {
+    background-color: var(--cor-destaque-2);
+    font-weight: 600;
+    margin-top: 20px;
+    padding: 15px 30px;
+}
+
+.iniciar-btn:hover,
+.novamente-btn:hover {
+    background-color: var(--cor-destaque);
+}
+
+.caixa-resultado {
+    display: none;
+}
+
+.caixa-resultado.mostrar {
+    display: block;
+}
+
+.texto-resultado {
+    color: var(--cor-texto-secundario);
+    line-height: 1.8;
+    margin-top: 20px;
+}
+
+@media (max-width: 600px) {
+    .caixa-principal {
+        padding: 25px 20px;
+    }
+
+    h1 {
+        font-size: 25px;
+    }
+
+    .caixa-perguntas {
+        font-size: 17px;
+    }
+}
