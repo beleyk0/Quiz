@@ -118,3 +118,9 @@ function jogaNovamente() {
 
     mostraPergunta();
 }
+const botao = document.querySelector(".iniciar-btn");
+
+botao.addEventListener("click", function() {
+    alert("Investigação iniciada!");
+});
+
